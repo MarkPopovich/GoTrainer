@@ -46,7 +46,6 @@ const GoBoard: React.FC<GoBoardProps> = ({gameState, onUserMove}) => {
   };
   const renderStones = () => {
     const stones = [];
-    console.log(gameState)
     for (let y = 0; y < boardSize; y++) {
       for (let x = 0; x < boardSize; x++) {
         const color = gameState[y][x];

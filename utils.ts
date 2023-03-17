@@ -40,9 +40,9 @@ export const calculateScores = (gameState: any) => {
           (point) => gameState[point.y][point.x] === StoneColor.WHITE
         );
 
-        if (blackNeighbors.length === neighbors.length) {
+        if (blackNeighbors.length > 0 && blackNeighbors.length === neighbors.length) {
           blackTerritory++;
-        } else if (whiteNeighbors.length === neighbors.length) {
+        } else if (whiteNeighbors.length > 0 && whiteNeighbors.length === neighbors.length) {
           whiteTerritory++;
         }
       }
@@ -54,3 +54,4 @@ export const calculateScores = (gameState: any) => {
     white: whiteStones + whiteTerritory,
   };
 };
+

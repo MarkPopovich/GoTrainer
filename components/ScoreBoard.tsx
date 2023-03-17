@@ -12,9 +12,9 @@ interface ScoreBoardProps {
     const [scores, setScores] = useState({ black: 0, white: 0 }); // Add this line
   
     useEffect(() => {
-      const newScores = calculateScores(gameState);
-      setScores(newScores);
-    }, [gameState]);
+        const newScores = calculateScores(gameState);
+        setScores(newScores);
+      }, [gameState]);
   
     return (
       <View style={styles.container}>
