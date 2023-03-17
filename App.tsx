@@ -2,12 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import GoBoard from './components/GoBoard';
 import ScoreBoard from './components/ScoreBoard';
-
-// Add an enum to represent stone colors
-enum StoneColor {
-  BLACK = 'black',
-  WHITE = 'white',
-}
+import { StoneColor, getAdjacentPoints } from './utils';
 
 const App = () => {
   const boardSize = 9;

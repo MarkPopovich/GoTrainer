@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { useEffect, useState } from 'react'; 
-import { calculateScores } from '../App';
+import { StoneColor, getAdjacentPoints, calculateScores } from '../utils';
 
 interface ScoreBoardProps {
     gameState: GameState;

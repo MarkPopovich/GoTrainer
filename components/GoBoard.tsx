@@ -3,18 +3,13 @@ import {View} from 'react-native';
 import Svg, {Line, Rect, Circle} from 'react-native-svg';
 import Stone from './Stone';
 import {SvgTouchEvent} from 'react-native-svg'; // Add this import at the top
+import { StoneColor, getAdjacentPoints } from '../utils';
 
 type BoardState = Array<Array<'black' | 'white' | null>>;
 
 interface GoBoardProps {
     gameState: BoardState;
     onUserMove: (x: number, y: number) => void;
-  }
-
-// Add an enum to represent stone colors
-enum StoneColor {
-    BLACK = 'black',
-    WHITE = 'white',
   }
 
 const GoBoard: React.FC<GoBoardProps> = ({gameState, onUserMove}) => {

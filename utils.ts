@@ -1,4 +1,21 @@
-import { StoneColor, getAdjacentPoints } from './app'; // Add this import at the top
+export enum StoneColor {
+  BLACK = 'black',
+  WHITE = 'white',
+}
+
+export const getAdjacentPoints = (x: number, y: number, boardSize: number) => {
+  const adjacentPoints = [
+    {x: x - 1, y},
+    {x: x + 1, y},
+    {x, y: y - 1},
+    {x, y: y + 1},
+  ];
+
+  return adjacentPoints.filter(
+    (point) => point.x >= 0 && point.x < boardSize && point.y >= 0 && point.y < boardSize
+  );
+};
+
 const boardSize = 9; 
 
 export const calculateScores = (gameState: any) => {
