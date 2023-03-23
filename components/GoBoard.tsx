@@ -3,7 +3,7 @@ import {View} from 'react-native';
 import Svg, {Line, Rect, Circle} from 'react-native-svg';
 import Stone from './Stone';
 import {SvgTouchEvent} from 'react-native-svg'; // Add this import at the top
-import { StoneColor, getAdjacentPoints } from '../utils';
+import { StoneColor, getAdjacentPoints, boardSize } from '../utils';
 
 type BoardState = Array<Array<'black' | 'white' | null>>;
 
@@ -13,7 +13,6 @@ interface GoBoardProps {
   }
 
 const GoBoard: React.FC<GoBoardProps> = ({gameState, onUserMove}) => {
-  const boardSize = 9;
   const tileSize = 40;
   const boardWidth = tileSize * (boardSize - 1);
 

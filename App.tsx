@@ -2,10 +2,9 @@ import React, { useState, useEffect } from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import GoBoard from './components/GoBoard';
 import ScoreBoard from './components/ScoreBoard';
-import { StoneColor, getAdjacentPoints } from './utils';
+import { StoneColor, getAdjacentPoints, boardSize } from './utils';
 
 const App = () => {
-  const boardSize = 9;
   const [gameState, setGameState] = useState(Array(9).fill(Array(9).fill(null)));
   const [currentPlayer, setCurrentPlayer] = useState(StoneColor.BLACK);
   const [consecutivePasses, setConsecutivePasses] = useState(0);

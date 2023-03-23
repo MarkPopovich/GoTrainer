@@ -16,7 +16,7 @@ export const getAdjacentPoints = (x: number, y: number, boardSize: number) => {
   );
 };
 
-const boardSize = 9; 
+export const boardSize = 9; 
 
 export const calculateScores = (gameState: any) => {
   let blackTerritory = 0;
